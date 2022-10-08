@@ -132,6 +132,8 @@
   },
   "name": "Clean air or not",
   "projectStatus": "Sandbox",
+  "imgColor": "#29af5d",
+  "imgPattern": 8,
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -185,6 +187,13 @@
     "displayedState": {
       "checks": []
     }
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1665215194336
   },
   "creationTag": {
     "versionNumber": 0,
