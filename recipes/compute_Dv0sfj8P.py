@@ -1,3 +1,4 @@
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # -*- coding: utf-8 -*-
 import dataiku
 import pandas as pd, numpy as np
@@ -19,9 +20,10 @@ def search_images(term, max_images=200): return L(ddg_images(term, max_results=m
 searches = 'clean air skyline', 'polluted air skyline'
 path = dataiku.Folder("Dv0sfj8P"), dataiku.Folder("rZHKyy2U")
 
-
+print(dataiku.Folder("Dv0sfj8P").get_path())
 for o, p in zip(searches, path):
-    dest = (p/o)
+    dest = (Path(p.get_path())/o)
+    
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo'))
     sleep(10)  # Pause between searches to avoid over-loading server
