@@ -24,7 +24,7 @@ searches = 'clean air skyline','polluted air skyline'
 path = Path('clean_or_polluted')
 print(path)
 
-for o, p in zip(searches, path):
+for o in searches:
     dest = (path/o)
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo'))
