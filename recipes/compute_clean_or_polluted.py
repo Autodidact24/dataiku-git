@@ -21,7 +21,7 @@ def search_images(term, max_images=200):
 # NB: DSS supports several kinds of APIs for reading and writing data. Please see doc.
 
 searches = 'clean air skyline','polluted air skyline'
-path = Path('clean_or_polluted').get_path()
+path = Path('clean_or_polluted')
 print(path)
 
 """
