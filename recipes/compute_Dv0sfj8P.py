@@ -16,8 +16,8 @@ from fastai.vision.all import *
 
 def search_images(term, max_images=200): return L(ddg_images(term, max_results=max_images)).itemgot('image')
 
-searches = 'clean air skyline','polluted air skyline'
-path = Path('clean air or not')
+searches = 'clean air skyline'
+path = Path('Dv0sfj8P')
 
 
 for o in searches:
