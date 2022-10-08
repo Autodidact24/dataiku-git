@@ -12,6 +12,7 @@ clean_air_or_not_info = clean_air_or_not.get_info()
 
 from duckduckgo_search import ddg_images
 from fastcore.all import *
+from fastai.vision.all import *
 
 def search_images(term, max_images=200): return L(ddg_images(term, max_results=max_images)).itemgot('image')
 
