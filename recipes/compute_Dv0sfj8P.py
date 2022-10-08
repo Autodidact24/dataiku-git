@@ -31,7 +31,7 @@ for o, p in zip(searches, path):
     sleep(10)
     download_images(dest, urls=search_images(f'{o} buildings'))
     sleep(10)
-    resize_images(path/o, max_size=400, dest=path/o)
+    resize_images(Path(p.get_path())/o, max_size=400, dest=Path(p.get_path())/o)
 
 # Write recipe outputs
 clean_air = dataiku.Folder("Dv0sfj8P")
