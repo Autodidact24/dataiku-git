@@ -16,12 +16,12 @@ from fastai.vision.all import *
 
 def search_images(term, max_images=200): return L(ddg_images(term, max_results=max_images)).itemgot('image')
 
-searches = 'clean air skyline'
-path = Path('Dv0sfj8P')
+searches = 'clean air skyline', 'polluted air skyline'
+path = dataiku.Folder("Dv0sfj8P"), dataiku.Folder("rZHKyy2U")
 
 
-for o in searches:
-    dest = (path/o)
+for o, p in zip(searches, path):
+    dest = (p/o)
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo'))
     sleep(10)  # Pause between searches to avoid over-loading server
