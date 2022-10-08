@@ -41,4 +41,3 @@ clean_or_polluted_df = ... # Compute a Pandas dataframe to write into clean_or_p
 # Write recipe outputs
 clean_or_polluted = dataiku.Dataset("clean_or_polluted")
 clean_or_polluted.write_with_schema(clean_or_polluted_df)
-"""
