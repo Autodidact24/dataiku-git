@@ -24,7 +24,6 @@ searches = 'clean air skyline','polluted air skyline'
 path = Path('clean_or_polluted')
 print(path)
 
-"""
 for o, p in zip(searches, path):
     dest = (path/o)
     dest.mkdir(exist_ok=True, parents=True)
