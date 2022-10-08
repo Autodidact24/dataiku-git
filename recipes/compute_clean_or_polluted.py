@@ -21,7 +21,7 @@ def search_images(term, max_images=200):
 # NB: DSS supports several kinds of APIs for reading and writing data. Please see doc.
 
 searches = 'clean air skyline','polluted air skyline'
-path = Path('clean_or_polluted')
+path = dataiku.Folder('clean_or_polluted').get_path()
 print(path)
 
 for o in searches:
@@ -35,7 +35,7 @@ for o in searches:
     sleep(10)
     resize_images(path/o, max_size=400, dest=path/o)
 
-clean_or_polluted_df = ... # Compute a Pandas dataframe to write into clean_or_polluted
+#clean_or_polluted_df = ... # Compute a Pandas dataframe to write into clean_or_polluted
 
 
 # Write recipe outputs
