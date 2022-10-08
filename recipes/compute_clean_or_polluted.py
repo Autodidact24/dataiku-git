@@ -27,12 +27,12 @@ print(path)
 for o in searches:
     dest = (path/o)
     dest.mkdir(exist_ok=True, parents=True)
-    download_images(dest, urls=search_images(f'{o} photo'))
-    sleep(10)  # Pause between searches to avoid over-loading server
-    download_images(dest, urls=search_images(f'{o} aqi'))
-    sleep(10)
-    download_images(dest, urls=search_images(f'{o} buildings'))
-    sleep(10)
+    download_images(dest, urls=search_images(f'{o} photo', max_images=1))
+    #sleep(10)  # Pause between searches to avoid over-loading server
+    #download_images(dest, urls=search_images(f'{o} aqi'))
+    #sleep(10)
+    #download_images(dest, urls=search_images(f'{o} buildings'))
+    #sleep(10)
     resize_images(path/o, max_size=400, dest=path/o)
 
 #clean_or_polluted_df = ... # Compute a Pandas dataframe to write into clean_or_polluted
