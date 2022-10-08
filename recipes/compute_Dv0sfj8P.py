@@ -2,6 +2,8 @@
 import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
+from fastdownload import download_url
+from fastcore.all import *
 from time import sleep
 
 # Read recipe inputs
