@@ -1,6 +1,13 @@
 {
   "mode": "UNION",
   "originColumnName": "original_dataset",
+  "selectedColumns": [
+    "path",
+    "basename",
+    "extension",
+    "last_modified",
+    "size"
+  ],
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -54,6 +61,33 @@
     }
   ],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "path",
+            "type": "string"
+          },
+          {
+            "name": "basename",
+            "type": "string"
+          },
+          {
+            "name": "extension",
+            "type": "string"
+          },
+          {
+            "name": "last_modified",
+            "type": "date"
+          },
+          {
+            "name": "size",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
