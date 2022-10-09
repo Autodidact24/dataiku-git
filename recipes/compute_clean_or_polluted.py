@@ -23,7 +23,6 @@ def search_images(term, max_images=200):
 
 searches = 'clean air skyline','polluted air skyline'
 
-
 paths = dataiku.Folder('clean_air').get_path(), dataiku.Folder('polluted_air').get_path()
 print(paths)
 
