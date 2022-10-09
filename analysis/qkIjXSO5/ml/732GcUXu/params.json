@@ -297,7 +297,7 @@
     "streamAll": false,
     "kfold": false,
     "nFolds": 5,
-    "instanceIdRefresher": 0,
+    "instanceIdRefresher": 1,
     "subSamplingSeed": 1337
   },
   "id": "732GcUXu",
