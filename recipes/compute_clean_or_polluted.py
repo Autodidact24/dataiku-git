@@ -22,7 +22,7 @@ def search_images(term, max_images=200):
 
 searches = 'clean air skyline','polluted air skyline'
 
-clean_or_polluted = dataiku.Dataset("clean_or_polluted")
+
 path = dataiku.Folder('clean_or_polluted').get_path()
 print(path)
 
@@ -41,5 +41,5 @@ for o in searches:
 
 
 # Write recipe outputs
-
+clean_or_polluted = dataiku.Dataset("clean_or_polluted")
 clean_or_polluted.write_with_schema(clean_or_polluted_df)
