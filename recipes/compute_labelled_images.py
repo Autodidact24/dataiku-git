@@ -17,12 +17,9 @@ LABEL_0 = "clean_air"
 LABEL_1 = "polluted_air"
 
 image_labels_df = pd.DataFrame(columns=['path', 'label'])
-for i,j in enumerate(paths):
-    if LABEL_0 in j:
-        image_labels_df.loc[i] = [j[1:], LABEL_0]
-    if LABEL_1 in j:
-        image_labels_df.loc[i] = [j[1:], LABEL_1]
-
+for folder in (clean_air, polluted_air):
+    for i, image in enumerate(folder.list_paths_in_partition()):
+        image_labels_df.iloc[i] = image_labels_df[image, folder]
 
 
 # Write recipe outputs
