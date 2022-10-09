@@ -344,7 +344,7 @@
   "backendType": "DEEP_HUB",
   "maxConcurrentModelTraining": 2,
   "envSelection": {
-    "envMode": "INHERIT",
+    "envMode": "USE_BUILTIN_MODE",
     "envName": "fastenv"
   },
   "containerSelection": {
