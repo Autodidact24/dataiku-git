@@ -28,16 +28,25 @@
       ]
     }
   },
-  "classes": [],
+  "classes": [
+    {
+      "key": "clean_air",
+      "value": ""
+    },
+    {
+      "key": "polluted_air",
+      "value": ""
+    }
+  ],
   "instructions": "",
   "minNbAnnotatorsPerRecord": 1,
   "permissions": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1665290583583
+    "lastModifiedOn": 1665290627166
   },
   "creationTag": {
     "versionNumber": 0,
