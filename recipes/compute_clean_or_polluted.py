@@ -30,16 +30,9 @@ for o,path in zip(searches, paths):
     dest = (path/o)
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo', max_images=1))
-    #sleep(10)  # Pause between searches to avoid over-loading server
-    #download_images(dest, urls=search_images(f'{o} aqi'))
-    #sleep(10)
-    #download_images(dest, urls=search_images(f'{o} buildings'))
-    #sleep(10)
+    sleep(10)  # Pause between searches to avoid over-loading server
+    download_images(dest, urls=search_images(f'{o} aqi'))
+    sleep(10)
+    download_images(dest, urls=search_images(f'{o} buildings'))
+    sleep(10)
     resize_images(path/o, max_size=400, dest=path/o)
-
-#clean_or_polluted_df = ... # Compute a Pandas dataframe to write into clean_or_polluted
-
-
-# Write recipe outputs
-#clean_or_polluted = dataiku.Dataset("clean_or_polluted")
-#clean_or_polluted.write_with_schema(clean_or_polluted_df)
