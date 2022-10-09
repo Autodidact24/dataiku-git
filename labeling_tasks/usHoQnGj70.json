@@ -1,0 +1,53 @@
+{
+  "owner": "admin",
+  "name": "label_image_labels",
+  "type": "IMAGE_CLASSIFICATION",
+  "inputs": {
+    "metadata": {
+      "items": [
+        {
+          "ref": "image_labels"
+        }
+      ]
+    },
+    "data": {
+      "items": [
+        {
+          "ref": "0J3uVaxZ"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "relabelled_images"
+        }
+      ]
+    }
+  },
+  "classes": [],
+  "instructions": "",
+  "minNbAnnotatorsPerRecord": 1,
+  "permissions": [],
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1665290583331
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1665290583331
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
