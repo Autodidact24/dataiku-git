@@ -26,5 +26,5 @@ for i,j in enumerate(paths):
 
 
 # Write recipe outputs
-image_labels = dataiku.Dataset("labelled_images")
+image_labels = dataiku.Dataset("images_labels")
 image_labels.write_with_schema(image_labels_df)
