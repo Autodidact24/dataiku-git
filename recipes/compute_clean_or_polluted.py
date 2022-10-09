@@ -10,6 +10,7 @@ from fastdownload import download_url
 from fastai.vision.all import *
 
 from time import sleep
+from os import path
 
 
 def search_images(term, max_images=200):
