@@ -2,6 +2,7 @@
   "owner": "admin",
   "name": "label_image_labels",
   "type": "IMAGE_CLASSIFICATION",
+  "idColumn": "image",
   "inputs": {
     "metadata": {
       "items": [
@@ -32,11 +33,11 @@
   "minNbAnnotatorsPerRecord": 1,
   "permissions": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1665290583331
+    "lastModifiedOn": 1665290583583
   },
   "creationTag": {
     "versionNumber": 0,
