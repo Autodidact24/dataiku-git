@@ -2,6 +2,7 @@
   "owner": "admin",
   "name": "label_clean_air_files",
   "type": "IMAGE_CLASSIFICATION",
+  "idColumn": "path",
   "inputs": {
     "metadata": {
       "items": [
@@ -28,11 +29,11 @@
   "minNbAnnotatorsPerRecord": 1,
   "permissions": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1665286903318
+    "lastModifiedOn": 1665286903526
   },
   "creationTag": {
     "versionNumber": 0,
