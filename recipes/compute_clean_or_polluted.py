@@ -27,7 +27,7 @@ paths = dataiku.Folder('clean_air').get_path(), dataiku.Folder('polluted_air').g
 paths = (Path(path) for path in paths)
 
 for o,path in zip(searches, paths):
-    dest = (path/o)
+    dest = (path)
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo', max_images=1))
     sleep(10)  # Pause between searches to avoid over-loading server
