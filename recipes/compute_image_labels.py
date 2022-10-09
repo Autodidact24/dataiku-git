@@ -13,10 +13,8 @@ polluted_air = dataiku.Folder("EP5fW8G4")
 # NB: DSS supports several kinds of APIs for reading and writing data. Please see doc.
 
 
-LABEL_0 = "clean_air"
-LABEL_1 = "polluted_air"
 
-image_labels_df = pd.DataFrame(columns=['path', 'label'])
+image_labels_df = pd.DataFrame(columns=['image', 'label'])
 for folder in (clean_air, polluted_air):
     for i, image in enumerate(folder.list_paths_in_partition()):
         image_labels_df.loc[i] = [image[1:], folder.get_name()]
