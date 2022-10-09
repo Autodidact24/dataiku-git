@@ -24,9 +24,9 @@ def search_images(term, max_images=200):
 searches = 'clean air skyline','polluted air skyline'
 
 paths = dataiku.Folder('clean_air').get_path(), dataiku.Folder('polluted_air').get_path()
-print(paths)
+paths = (Path(path) for path in paths)
 
-for o in searches:
+for o,path in zip(searches, paths):
     dest = (path/o)
     dest.mkdir(exist_ok=True, parents=True)
     download_images(dest, urls=search_images(f'{o} photo', max_images=1))
@@ -41,5 +41,5 @@ for o in searches:
 
 
 # Write recipe outputs
-clean_or_polluted = dataiku.Dataset("clean_or_polluted")
-clean_or_polluted.write_with_schema(clean_or_polluted_df)
+#clean_or_polluted = dataiku.Dataset("clean_or_polluted")
+#clean_or_polluted.write_with_schema(clean_or_polluted_df)
