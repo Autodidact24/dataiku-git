@@ -345,7 +345,7 @@
   "maxConcurrentModelTraining": 2,
   "envSelection": {
     "envMode": "EXPLICIT_ENV",
-    "envName": "INTERNAL_image_classification_v1"
+    "envName": "visionenv"
   },
   "containerSelection": {
     "containerMode": "INHERIT"
